@@ -16,6 +16,7 @@
 <h2 style="text-align: justify;">EXPLORATORY DATA ANALYSIS (EDA)</h2>
 <p style="text-align: justify;">Initially, an empty column was removed and the remaining columns were renamed for easier manipulation. The dataset has missing data in the customer_id and description features, which was dropped, as it cannot be assumed that each missing customer_id is unique or how it relates to the rest of the features since the project is based on customer behavior.</p>
 <p style="text-align: justify;">When examining the numerical attributes, it can be observed that both the quantity and unit price have a wide range, a mean above the median, and a large distance from the 3IQR (interquartile range) to the maximum value, indicating the presence of outliers. The unit_price has really small values inferior to 0.01 that will be filtered out, and there are negative quantities, which can be returned products.</p>
+<p style="text-align: justify;"><img title="Describe" src="https://github.com/gabrielpastega/cluster-vips/blob/main/img/cluster_describe.png" /></p>
 <p style="text-align: justify;">On the categorical attributes the 'invoice_no' feature contains data where a letter has been added to the code, and the encoding of this variable and its use is unknown. Additionally, it's noticeable that these data are related to the negative numbers in the 'quantity' numeric feature. The 'stock_code' feature also contains some codes with added letters, and accessing the data source is necessary for a better understanding of them. However, codes consisting of only letters don't seem to represent sales, so they need to be addressed. Within the 'country' feature, there are data entries that are not specified as countries and are not recognized as valid countries.</p>
 <p style="text-align: justify;">Before we can start the feature engineering and data modeling we will filter some of the data with the following criteria:</p>
 <ol style="text-align: justify;">
@@ -179,7 +180,7 @@
 </tbody>
 </table>
 <p>With the results now is possible to build the RFM Grid based on gross_revenue score and recency_days score.</p>
-<p>[INSERIR IMAGEM]</p>
+<p style="text-align: justify;"><img title="RFM Grid" src="https://github.com/gabrielpastega/cluster-vips/blob/main/img/rfm_grid_score.png" /></p>
 <ul>
 <li><strong>Champions:&nbsp;</strong>Cluster 2 has the highest gross revenue, with a high frequency of purchases and a great average number of orders.</li>
 <li><strong>Loyal Customers: </strong>Cluster 5, second best in gross_revenue, recency_days, and total_orders, need to improve the frequency of this group.</li>
@@ -188,7 +189,6 @@
 <li><strong>About to sleep:&nbsp;</strong>Cluster 8, low gross_revenue but a average recency_days score, need to improve the engagement of this customers.</li>
 <li><strong>Hibernating:&nbsp;</strong>Clusters 4, 3, 9, and 1, don't engage often with the company and have a low gross_revenue. Although, when were active used to be frequent buyers.</li>
 </ul>
-<h2>MODEL DEPLOYMENT</h2>
 <h2 style="text-align: justify;">MODEL DEPLOYMENT</h2>
 <p style="text-align: justify;">The model deployment was built using the tools from the AWS environment and a Github repository, as seen in the image below.</p>
 <p style="text-align: justify;"><img title="deploy structure" src="https://github.com/gabrielpastega/cluster-vips/blob/main/img/deploy_structure.png" /></p>
