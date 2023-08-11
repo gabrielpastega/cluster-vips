@@ -63,6 +63,132 @@
 <p style="text-align: justify;">The clusters are ordered by the highest average gross revenue, with cluster 2 having the best results. These highly engaged customers comprise around 8.89% of the total clientele. Their substantial average gross revenue of $15,857.94, average recency period of 11.88 days, and high interaction frequency showcase their strong interest in the offerings. However, their relatively high return quantity of 218.40 indicates possible purchase concerns.</p>
 <p style="text-align: justify;"><img title="Clusters Profile" src="https://github.com/gabrielpastega/cluster-vips/blob/main/img/cluster_profile.png" /></p>
 <p style="text-align: justify;">When comparing cluster 2 with 5 (second in the ordering based on highest gross_revenue) can be observed that cluster 5 includes customers with moderate shopping behavior, placing an average of 8.48 orders. They have a low purchase frequency, with an average of 0.04, and a lower gross revenue of $3303.88. However, they exhibit solid engagement and have a low return rate, with only 53 returns and a 27-day interval between purchases.</p>
+<p>It is possible to determine which type of customer is present in each cluster and develop custom strategies for each group based on their profile. The RFM score can be used to divide customers into groups, ranging from best value (5) to worst value (1). The score is calculated as the mean value from each row.</p>
+<table style="height: 216px;">
+<tbody>
+<tr style="height: 36px;">
+<th style="text-align: center; height: 36px; width: 48.2344px;">Cluster</th>
+<th style="text-align: center; height: 36px; width: 83.0625px;">Customer ID</th>
+<th style="text-align: center; height: 36px; width: 102.344px;">Gross Revenue</th>
+<th style="text-align: center; height: 36px; width: 94.625px;">Recency Days</th>
+<th style="text-align: center; height: 36px; width: 81.875px;">Total Orders</th>
+<th style="text-align: center; height: 36px; width: 70.8125px;">Frequency</th>
+<th style="text-align: center; height: 36px; width: 113.094px;">Quantity Returns</th>
+<th style="text-align: center; height: 36px; width: 42.875px;">Score</th>
+</tr>
+<tr style="height: 18px;">
+<td style="text-align: center; height: 18px; width: 48.2344px;">2</td>
+<td style="text-align: center; height: 18px; width: 83.0625px;">251</td>
+<td style="text-align: center; height: 18px; width: 102.344px;">5</td>
+<td style="text-align: center; height: 18px; width: 94.625px;">5</td>
+<td style="text-align: center; height: 18px; width: 81.875px;">5</td>
+<td style="text-align: center; height: 18px; width: 70.8125px;">5</td>
+<td style="text-align: center; height: 18px; width: 113.094px;">1</td>
+<td style="text-align: center; height: 18px; width: 42.875px;">4.2</td>
+</tr>
+<tr style="height: 18px;">
+<td style="text-align: center; height: 18px; width: 48.2344px;">5</td>
+<td style="text-align: center; height: 18px; width: 83.0625px;">481</td>
+<td style="text-align: center; height: 18px; width: 102.344px;">4</td>
+<td style="text-align: center; height: 18px; width: 94.625px;">4</td>
+<td style="text-align: center; height: 18px; width: 81.875px;">4</td>
+<td style="text-align: center; height: 18px; width: 70.8125px;">3</td>
+<td style="text-align: center; height: 18px; width: 113.094px;">2</td>
+<td style="text-align: center; height: 18px; width: 42.875px;">3.5</td>
+</tr>
+<tr style="height: 18px;">
+<td style="text-align: center; height: 18px; width: 48.2344px;">0</td>
+<td style="text-align: center; height: 18px; width: 83.0625px;">140</td>
+<td style="text-align: center; height: 18px; width: 102.344px;">3</td>
+<td style="text-align: center; height: 18px; width: 94.625px;">3</td>
+<td style="text-align: center; height: 18px; width: 81.875px;">3</td>
+<td style="text-align: center; height: 18px; width: 70.8125px;">4</td>
+<td style="text-align: center; height: 18px; width: 113.094px;">4</td>
+<td style="text-align: center; height: 18px; width: 42.875px;">3.5</td>
+</tr>
+<tr style="height: 18px;">
+<td style="text-align: center; height: 18px; width: 48.2344px;">6</td>
+<td style="text-align: center; height: 18px; width: 83.0625px;">238</td>
+<td style="text-align: center; height: 18px; width: 102.344px;">3</td>
+<td style="text-align: center; height: 18px; width: 94.625px;">3</td>
+<td style="text-align: center; height: 18px; width: 81.875px;">3</td>
+<td style="text-align: center; height: 18px; width: 70.8125px;">4</td>
+<td style="text-align: center; height: 18px; width: 113.094px;">3</td>
+<td style="text-align: center; height: 18px; width: 42.875px;">3.3</td>
+</tr>
+<tr style="height: 18px;">
+<td style="text-align: center; height: 18px; width: 48.2344px;">7</td>
+<td style="text-align: center; height: 18px; width: 83.0625px;">100</td>
+<td style="text-align: center; height: 18px; width: 102.344px;">3</td>
+<td style="text-align: center; height: 18px; width: 94.625px;">2</td>
+<td style="text-align: center; height: 18px; width: 81.875px;">3</td>
+<td style="text-align: center; height: 18px; width: 70.8125px;">2</td>
+<td style="text-align: center; height: 18px; width: 113.094px;">2</td>
+<td style="text-align: center; height: 18px; width: 42.875px;">2.7</td>
+</tr>
+<tr style="height: 18px;">
+<td style="text-align: center; height: 18px; width: 48.2344px;">4</td>
+<td style="text-align: center; height: 18px; width: 83.0625px;">294</td>
+<td style="text-align: center; height: 18px; width: 102.344px;">2</td>
+<td style="text-align: center; height: 18px; width: 94.625px;">2</td>
+<td style="text-align: center; height: 18px; width: 81.875px;">3</td>
+<td style="text-align: center; height: 18px; width: 70.8125px;">3</td>
+<td style="text-align: center; height: 18px; width: 113.094px;">4</td>
+<td style="text-align: center; height: 18px; width: 42.875px;">3</td>
+</tr>
+<tr style="height: 18px;">
+<td style="text-align: center; height: 18px; width: 48.2344px;">3</td>
+<td style="text-align: center; height: 18px; width: 83.0625px;">498</td>
+<td style="text-align: center; height: 18px; width: 102.344px;">2</td>
+<td style="text-align: center; height: 18px; width: 94.625px;">2</td>
+<td style="text-align: center; height: 18px; width: 81.875px;">2</td>
+<td style="text-align: center; height: 18px; width: 70.8125px;">3</td>
+<td style="text-align: center; height: 18px; width: 113.094px;">4</td>
+<td style="text-align: center; height: 18px; width: 42.875px;">2.8</td>
+</tr>
+<tr style="height: 18px;">
+<td style="text-align: center; height: 18px; width: 48.2344px;">9</td>
+<td style="text-align: center; height: 18px; width: 83.0625px;">49</td>
+<td style="text-align: center; height: 18px; width: 102.344px;">1</td>
+<td style="text-align: center; height: 18px; width: 94.625px;">1</td>
+<td style="text-align: center; height: 18px; width: 81.875px;">2</td>
+<td style="text-align: center; height: 18px; width: 70.8125px;">5</td>
+<td style="text-align: center; height: 18px; width: 113.094px;">2</td>
+<td style="text-align: center; height: 18px; width: 42.875px;">2.7</td>
+</tr>
+<tr style="height: 18px;">
+<td style="text-align: center; height: 18px; width: 48.2344px;">1</td>
+<td style="text-align: center; height: 18px; width: 83.0625px;">630</td>
+<td style="text-align: center; height: 18px; width: 102.344px;">1</td>
+<td style="text-align: center; height: 18px; width: 94.625px;">1</td>
+<td style="text-align: center; height: 18px; width: 81.875px;">2</td>
+<td style="text-align: center; height: 18px; width: 70.8125px;">5</td>
+<td style="text-align: center; height: 18px; width: 113.094px;">4</td>
+<td style="text-align: center; height: 18px; width: 42.875px;">2.8</td>
+</tr>
+<tr style="height: 18px;">
+<td style="text-align: center; height: 18px; width: 48.2344px;">8</td>
+<td style="text-align: center; height: 18px; width: 83.0625px;">143</td>
+<td style="text-align: center; height: 18px; width: 102.344px;">1</td>
+<td style="text-align: center; height: 18px; width: 94.625px;">3</td>
+<td style="text-align: center; height: 18px; width: 81.875px;">2</td>
+<td style="text-align: center; height: 18px; width: 70.8125px;">1</td>
+<td style="text-align: center; height: 18px; width: 113.094px;">5</td>
+<td style="text-align: center; height: 18px; width: 42.875px;">2.2</td>
+</tr>
+</tbody>
+</table>
+<p>With the results now is possible to build the RFM Grid based on gross_revenue score and recency_days score.</p>
+<p>[INSERIR IMAGEM]</p>
+<ul>
+<li><strong>Champions:&nbsp;</strong>Cluster 2 has the highest gross revenue, with a high frequency of purchases and a great average number of orders.</li>
+<li><strong>Loyal Customers: </strong>Cluster 5, second best in gross_revenue, recency_days, and total_orders, need to improve the frequency of this group.</li>
+<li><strong>Need Attention: </strong>Clusters 0 and 6 have average gross revenue, recency days, and total orders, but they make up for it with great frequency and returns. Their purchase value can be improved.</li>
+<li><strong>At Risk: </strong>Cluster 7 has an average gross revenue and total orders, but scores poorly on recency days, frequency, and quantity of returns.</li>
+<li><strong>About to sleep:&nbsp;</strong>Cluster 8, low gross_revenue but a average recency_days score, need to improve the engagement of this customers.</li>
+<li><strong>Hibernating:&nbsp;</strong>Clusters 4, 3, 9, and 1, don't engage often with the company and have a low gross_revenue. Although, when were active used to be frequent buyers.</li>
+</ul>
+<h2>MODEL DEPLOYMENT</h2>
 <h2 style="text-align: justify;">MODEL DEPLOYMENT</h2>
 <p style="text-align: justify;">The model deployment was built using the tools from the AWS environment and a Github repository, as seen in the image below.</p>
 <p style="text-align: justify;"><img title="deploy structure" src="https://github.com/gabrielpastega/cluster-vips/blob/main/img/deploy_structure.png" /></p>
