@@ -1,21 +1,21 @@
 <h2 style="text-align: justify;">LOYALTY PROGRAM WITH CLUSTERING AND RFM MODEL</h2>
 <h2 style="text-align: justify;">PROJECT OBJECTIVE</h2>
-<p style="text-align: justify;">This project aims to develop a loyalty program using a clustering machine learning algorithm based on RFM (Recency, Frequency, Monetary) features. The objective is to segment customers into 10 distinct groups to tailor targeted marketing strategies, enhance customer engagement, and identify the most valuable customers.</p>
+<p style="text-align: justify;">This project aims to develop a loyalty program using a clustering machine learning algorithm based on RFM (Recency, Frequency, Monetary) features. The objective is to segment customers into 10 distinct groups to tailor targeted marketing strategies, enhance customer engagement, investigate customer behavior, and identify the most valuable customers.</p>
 <h2 style="text-align: justify;">SOLUTION STRUCTURE</h2>
 <p style="text-align: justify;">The project is organized into the following sections:</p>
 <ul style="text-align: justify;">
 <li><strong>Data Collection:</strong> This project utilizes the following dataset: <a href="https://www.kaggle.com/datasets/carrie1/ecommerce-data">E-Commerce Data</a></li>
 <li><strong>EDA:</strong> Includes exploratory data analysis notebooks and profile reports that provide insights into the dataset.</li>
-<li><strong>Data Modeling:</strong> This implements the clustering machine learning algorithm and feature engineering of the dataset into the RFM model.</li>
+<li><strong>Data Modeling:</strong> This code applies the clustering machine learning algorithm and performs feature engineering on the dataset using features created from the RFM model.</li>
 <li><strong>Results Analysis:</strong> Includes analysis and visualization of the results obtained from the clustering algorithm.</li>
 <li><strong>Model Deployment:</strong> Documentation and scripts for deploying the trained model in the AWS environment utilizing RDS, S3, and EC2 services.</li>
 <li><strong>Next Steps:</strong> Outlines future improvements and enhancements for the algorithm and solution developed.</li>
 </ul>
 <h2 style="text-align: justify;">DATA COLLECTION</h2>
-<p style="text-align: justify;">The data for this project can be obtained on the Kaggle website <a href="https://www.kaggle.com/datasets/carrie1/ecommerce-data">(E-Commerce Data</a>) it contains 541909 rows and 9 columns, also it was used the cp437 for decoding the dataset.</p>
+<p style="text-align: justify;">The data for this project can be obtained on the Kaggle website <a href="https://www.kaggle.com/datasets/carrie1/ecommerce-data">(E-Commerce Data</a>) it contains 541909 rows and 9 columns, also it was used the cp437 encoder for decoding the dataset.</p>
 <h2 style="text-align: justify;">EXPLORATORY DATA ANALYSIS (EDA)</h2>
 <p style="text-align: justify;">Initially, an empty column was removed and the remaining columns were renamed for easier manipulation. The dataset has missing data in the customer_id and description features, which was dropped, as it cannot be assumed that each missing customer_id is unique or how it relates to the rest of the features since the project is based on customer behavior.</p>
-<p style="text-align: justify;">When examining the numerical attributes, it can be observed that both the quantity and unit price have a wide range, a mean above the median, and a large distance from the 3IQR to the maximum value, indicating the presence of outliers. The unit_price has really small values inferior to 0.01 that will be filtered out, and there are negative quantities, which can be returned products.</p>
+<p style="text-align: justify;">When examining the numerical attributes, it can be observed that both the quantity and unit price have a wide range, a mean above the median, and a large distance from the 3IQR (interquartile range) to the maximum value, indicating the presence of outliers. The unit_price has really small values inferior to 0.01 that will be filtered out, and there are negative quantities, which can be returned products.</p>
 <p style="text-align: justify;">On the categorical attributes the 'invoice_no' feature contains data where a letter has been added to the code, and the encoding of this variable and its use is unknown. Additionally, it's noticeable that these data are related to the negative numbers in the 'quantity' numeric feature. The 'stock_code' feature also contains some codes with added letters, and accessing the data source is necessary for a better understanding of them. However, codes consisting of only letters don't seem to represent sales, so they need to be addressed. Within the 'country' feature, there are data entries that are not specified as countries and are not recognized as valid countries.</p>
 <p style="text-align: justify;">Before we can start the feature engineering and data modeling we will filter some of the data with the following criteria:</p>
 <ol style="text-align: justify;">
@@ -24,7 +24,7 @@
 <li>Categorical feature 'description': remove completely.</li>
 <li>Categorical feature 'country': remove unspecified and non-country entries.</li>
 <li>User 16446 with highly divergent results.</li>
-<li>Numerical feature 'quantity' is divided into 2 new data frames.</li>
+<li>Numerical feature 'quantity' is divided into 2 new data frames, one for sales and another for returns.</li>
 </ol>
 <h2 style="text-align: justify;">DATA MODELLING</h2>
 <p style="text-align: justify;">For the development of feature engineering, we based our features using RFM (Recency, Frequency, Monetary) model that quantifies and segments customers based on their recent purchasing behavior, frequency of transactions, and monetary value, aiding in targeted marketing strategies. Beyond recency, frequency, and monetary (named gross_revenue in the project) it was also created:</p>
@@ -51,13 +51,13 @@
 <p><strong>avg_recency_days</strong>: average time elapsed since the most recent purchase across all customers, indicating recency of activity.</p>
 </li>
 <li>
-<p><strong>qty_returns</strong>: total quantity of items that have been returned by customers, indicating the extent of product returns.</p>
+<p><strong>qty_returns</strong>: the total quantity of items that have been returned by customers, indicating the extent of product returns.</p>
 </li>
 </ol>
-<p style="text-align: justify;">Afterward, it was analyzed, and selected the following features to build the machine learning model:' customer_id', 'gross_revenue', 'recency_days', 'total_orders', 'frequency', and 'qty_returns'.</p>
+<p style="text-align: justify;">Afterward, it was analyzed and selected the following features to build the machine learning model:' customer_id', 'gross_revenue', 'recency_days', 'total_orders', 'frequency', and 'qty_returns'.</p>
 <p style="text-align: justify;">The main objective is to develop and implement a clustering machine learning algorithm based on the RFM model for a loyalty program. This will help group customers into different clusters, allowing for personalized marketing strategies and improved customer engagement.</p>
 <p style="text-align: justify;">The combination of embedding techniques and clustering algorithms creates an iterative refinement process. Embeddings group data points into preliminary clusters based on more informative representations, which are then fine-tuned by clustering algorithms to produce well-defined segments. This synergy enhances the overall quality and interpretability of the final clusters.</p>
-<p style="text-align: justify;">First, feature embedding techniques like PCA, t-SNE, UMAP, and tree-based embedding are used to capture subtle relationships and patterns. Then, for each type of embedding, clustering algorithms such as K-Means, GMM, Hierarchical Clustering, and DBSCAN are tested to find the optimal silhouette score. After a thorough evaluation, the Tree-Based embedding technique and GMM clustering algorithm are chosen as they provided the best results.</p>
+<p style="text-align: justify;">Various techniques are used to capture subtle patterns and relationships in data. The used in this project techniques include the embedding methods PCA, t-SNE, UMAP, and tree-based embedding. To determine the most optimal approach, each type of embedding is tested with the following clustering algorithms K-Means, GMM, Hierarchical Clustering, and DBSCAN. The performance of each approach is evaluated using a silhouette score. After a thorough examination, it was determined that the Tree-Based embedding and GMM clustering algorithm provide the most accurate and reliable results.</p>
 <h2 style="text-align: justify;">RESULTS ANALYSIS</h2>
 <p style="text-align: justify;"><img title="Clusters Viz" src="https://github.com/gabrielpastega/cluster-vips/blob/main/img/cluster_viz.png" /></p>
 <p style="text-align: justify;">The clusters are ordered by the highest average gross revenue, with cluster 2 having the best results. These highly engaged customers comprise around 8.89% of the total clientele. Their substantial average gross revenue of $15,857.94, average recency period of 11.88 days, and high interaction frequency showcase their strong interest in the offerings. However, their relatively high return quantity of 218.40 indicates possible purchase concerns.</p>
