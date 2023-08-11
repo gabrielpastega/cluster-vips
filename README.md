@@ -59,13 +59,15 @@
 <p>The combination of embedding techniques and clustering algorithms creates an iterative refinement process. Embeddings group data points into preliminary clusters based on more informative representations, which are then fine-tuned by clustering algorithms to produce well-defined segments. This synergy enhances the overall quality and interpretability of the final clusters.</p>
 <p>First, feature embedding techniques like PCA, t-SNE, UMAP, and tree-based embedding are used to capture subtle relationships and patterns. Then, for each type of embedding, clustering algorithms such as K-Means, GMM, Hierarchical Clustering, and DBSCAN are tested to find the optimal silhouette score. After a thorough evaluation, the Tree-Based embedding technique and GMM clustering algorithm are chosen as they provided the best results.</p>
 <h2>RESULTS ANALYSIS</h2>
-<p>[insert image]</p>
+<p><img src='https://github.com/gabrielpastega/cluster-vips/blob/main/img/cluster_viz.png', title='Clusters Viz'></p>
 <p>The clusters are ordered by the highest average gross revenue, with cluster 2 having the best results. These highly engaged customers comprise around 8.89% of the total clientele. Their substantial average gross revenue of $15,857.94, average recency period of 11.88 days, and high interaction frequency showcase their strong interest in the offerings. However, their relatively high return quantity of 218.40 indicates possible purchase concerns.</p>
+
+<p><img src='https://github.com/gabrielpastega/cluster-vips/blob/main/img/cluster_profile.png', title='Clusters Profile'></p>
+
 <p>When comparing cluster 2 with 5 (second in the ordering based on highest gross_revenue) can be observed that cluster 5 includes customers with moderate shopping behavior, placing an average of 8.48 orders. They have a low purchase frequency, with an average of 0.04, and a lower gross revenue of $3303.88. However, they exhibit solid engagement and have a low return rate, with only 53 returns and a 27-day interval between purchases.</p>
-<p>[insert image]</p>
 <h2>MODEL DEPLOYMENT</h2>
 <p>The model deployment was built using the tools from the AWS environment and a Github repository, as seen in the image below.</p>
-<p>[insert image]</p>
+<p><img src='https://github.com/gabrielpastega/cluster-vips/blob/main/img/deploy_structure.png', title='deploy structure'></p>
 <p>At first, everything is tested locally creating the prototype of our project on the Jupyter Notebook and SQLite. That way it can be verified that our database will receive the right tables and values. Also, we can save our machine learning model in Pickle to serialize our model and send it directly to the S3 storage, if performance decreases we can revisit and improve our models.</p>
 <p>After testing and validation, the project will be pushed to a GitHub repository linked to our EC2 instance running Ubuntu OS. A Cron Job will be scheduled to run a script that utilizes the papermill tool to execute our deploy notebook weekly. The output will be saved to a new notebook and send the updated data to our RDS Postgres database.</p>
 <p>Finally, we can visualize the data of the clusters using Metabase locally which is connected directly to our RDS Database.</p>
