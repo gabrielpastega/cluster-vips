@@ -195,7 +195,7 @@
 <p style="text-align: justify;">At first, everything is tested locally creating the prototype of our project on the Jupyter Notebook and SQLite. That way it can be verified that our database will receive the right tables and values. Also, we can save our machine learning model in Pickle to serialize our model and send it directly to the S3 storage, if performance decreases we can revisit and improve our models.</p>
 <p style="text-align: justify;">After testing and validation, the project will be pushed to a GitHub repository linked to our EC2 instance running Ubuntu OS. A Cron Job will be scheduled to run a script that utilizes the papermill tool to execute our deploy notebook weekly. The output will be saved to a new notebook and send the updated data to our RDS Postgres database.</p>
 <p style="text-align: justify;">Finally, we can visualize the data of the clusters using Metabase locally which is connected directly to our RDS Database.</p>
-<p style="text-align: justify;">[insert image]</p>
+<p style="text-align: justify;"><img title="dashboard structure" src="https://github.com/gabrielpastega/cluster-vips/blob/main/img/metabase_dashboard.png" /></p><p style="text-align: justify;">[insert image]</p>
 <h2 style="text-align: justify;">NEXT STEPS</h2>
 <p style="text-align: justify;">Potential next steps and improvements for the loyalty program:</p>
 <ul style="text-align: justify;">
