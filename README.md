@@ -199,11 +199,11 @@
 <h2 style="text-align: justify;">NEXT STEPS</h2>
 <p style="text-align: justify;">Potential next steps and improvements for the loyalty program:</p>
 <ul style="text-align: justify;">
-<li>Refining the clustering algorithm,</li>
-<li>Integrating additional data sources,</li>
-<li>Conducting A/B tests,</li>
-<li>Continuously monitoring and updating the program based on customer behavior,</li>
-<li>Feedback.</li>
+<li>Refining the clustering algorithm;</li>
+<li>Integrating additional data sources;</li>
+<li>Conducting A/B tests;</li>
+<li>Continuously monitoring and updating the program based on customer behavior;</li>
+<li>Feedback from the sales and marketing teams.</li>
 </ul>
 <hr />
 <p style="text-align: justify;">Feel free to contribute, provide feedback, and use the insights from this project to enhance customer engagement and drive the success of your loyalty program. If you have any questions or suggestions, please contact me at https://www.linkedin.com/in/gabriel-pastega/.</p>
