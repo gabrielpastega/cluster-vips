@@ -58,7 +58,40 @@
 <p style="text-align: justify;">Afterward, it was analyzed and selected the following features to build the machine learning model:' customer_id', 'gross_revenue', 'recency_days', 'total_orders', 'frequency', and 'qty_returns'.</p>
 <p style="text-align: justify;">The main objective is to develop and implement a clustering machine learning algorithm based on the RFM model for a loyalty program. This will help group customers into different clusters, allowing for personalized marketing strategies and improved customer engagement.</p>
 <p style="text-align: justify;">The combination of embedding techniques and clustering algorithms creates an iterative refinement process. Embeddings group data points into preliminary clusters based on more informative representations, which are then fine-tuned by clustering algorithms to produce well-defined segments. This synergy enhances the overall quality and interpretability of the final clusters.</p>
-<p style="text-align: justify;">Various techniques are used to capture subtle patterns and relationships in data. The used in this project techniques include the embedding methods PCA, t-SNE, UMAP, and tree-based embedding. To determine the most optimal approach, each type of embedding is tested with the following clustering algorithms K-Means, GMM, Hierarchical Clustering, and DBSCAN. The performance of each approach is evaluated using a silhouette score. After a thorough examination, it was determined that the Tree-Based embedding and GMM clustering algorithm provide the most accurate and reliable results.</p>
+<p style="text-align: justify;">Various techniques are used to capture subtle patterns and relationships in data. The used in this project include:</p>
+<p style="text-align: justify;"><strong>1. Feature Representation Techniques: Embedding Methods</strong> In order to extract meaningful information from the data and enable effective clustering, various embedding techniques were applied. These techniques are designed to transform the original feature space into a new representation that highlights underlying patterns and relationships.</p>
+<ul style="text-align: justify;">
+<li>
+<p><strong>Principal Component Analysis (PCA):</strong> PCA is a dimensionality reduction technique that identifies the most significant directions of variance in the data. It creates orthogonal components that capture the largest variations, allowing for a compact representation while preserving essential information.</p>
+</li>
+<li>
+<p><strong>t-Distributed Stochastic Neighbor Embedding (t-SNE):</strong> t-SNE is a nonlinear dimensionality reduction technique that emphasizes the preservation of pairwise similarities between data points. It is particularly effective at revealing local structures and clusters in high-dimensional data.</p>
+</li>
+<li>
+<p><strong>Uniform Manifold Approximation and Projection (UMAP):</strong> UMAP is another nonlinear dimensionality reduction technique that emphasizes preserving both local and global structures in the data. It aims to create a more faithful representation of the data's intrinsic geometry.</p>
+</li>
+<li>
+<p><strong>Tree-Based Embedding:</strong> This technique involves utilizing decision trees to create embeddings. Decision trees hierarchically split the data based on feature values, and the paths taken by data points through the tree can be used as embeddings.</p>
+</li>
+</ul>
+<p style="text-align: justify;"><strong>2. Clustering Algorithms for Segmenting Data:</strong> Once the feature representation is obtained using embedding techniques, clustering algorithms are employed to group similar data points together. This grouping aids in the identification of distinct customer segments.</p>
+<ul style="text-align: justify;">
+<li>
+<p><strong>K-Means:</strong> K-Means is a widely used clustering algorithm that assigns data points to clusters by minimizing the sum of squared distances between data points and cluster centroids. It assumes that clusters are spherical and similar sized.</p>
+</li>
+<li>
+<p><strong>Gaussian Mixture Model (GMM):</strong> GMM is a probabilistic clustering algorithm that models data as a mixture of multiple Gaussian distributions. It accommodates elliptical clusters and allows for soft assignment of data points to clusters based on probabilities.</p>
+</li>
+<li>
+<p><strong>Hierarchical Clustering:</strong> Hierarchical Clustering builds a tree-like structure of clusters, where data points are grouped together in a nested manner. It allows for both agglomerative (bottom-up) and divisive (top-down) approaches to clustering.</p>
+</li>
+<li>
+<p><strong>DBSCAN (Density-Based Spatial Clustering of Applications with Noise):</strong> DBSCAN identifies clusters based on the density of data points in the feature space. It can discover clusters of varying shapes and sizes while also identifying noise points that do not belong to any cluster.</p>
+</li>
+</ul>
+<p style="text-align: justify;"><strong>3. Evaluation and Optimal Approach: Silhouette Score</strong> To determine the effectiveness of each approach, the silhouette score is used as an evaluation metric. The silhouette score measures how similar an object is to its cluster compared to other clusters. A higher silhouette score indicates better-defined and well-separated clusters.</p>
+<p style="text-align: justify;"><strong>4. Optimal Approach: Tree-Based Embedding and GMM</strong> Following a thorough analysis of the various embedding techniques and clustering algorithms, the combination of Tree-Based embedding and the Gaussian Mixture Model (GMM) clustering algorithm was found to yield the most accurate and dependable results. This combination ensures that the clusters are well-formed, and the customer segments are meaningful for the loyalty program's goals.</p>
+<p style="text-align: justify;">By systematically combining embedding techniques and clustering algorithms, this project achieves a sophisticated segmentation of customers, enabling the implementation of targeted marketing strategies and can target the enhancement of overall customer engagement.</p>
 <h2 style="text-align: justify;">RESULTS ANALYSIS</h2>
 <p style="text-align: justify;"><img title="Clusters Viz" src="https://github.com/gabrielpastega/cluster-vips/blob/main/img/cluster_viz.png" /></p>
 <p style="text-align: justify;">The clusters are ordered by the highest average gross revenue, with cluster 2 having the best results. These highly engaged customers comprise around 8.89% of the total clientele. Their substantial average gross revenue of $15,857.94, average recency period of 11.88 days, and high interaction frequency showcase their strong interest in the offerings. However, their relatively high return quantity of 218.40 indicates possible purchase concerns.</p>
